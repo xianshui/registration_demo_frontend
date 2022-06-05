@@ -1,11 +1,10 @@
-import React, {useState, useEffect, useRef} from 'react';
-import { Form, Input, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Upload, Typography, DatePicker, Modal } from 'antd';
-import { UploadOutlined, InboxOutlined } from '@ant-design/icons';
+import {useState, useRef} from 'react';
+import { Form, Input, Select, Button, AutoComplete, Upload, DatePicker, Modal } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 import {API_POINT} from '../Constants'
 import httpUtil from '../utils/HttpUtil'
 
 const { Option } = Select
-const {Text, Title} = Typography
 
 const RegistrationView = () => {
   const [form] = Form.useForm();
