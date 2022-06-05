@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import { Form, Input, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Upload, Typography, DatePicker, TimePicker } from 'antd';
+import { Select, Button,  Typography } from 'antd';
 import RegistrationView from './components/RegistrationView'
 import AppointmentView from './components/AppointmentView'
 import SignInView from './components/SignInView'
 import ManageUserView from './components/ManageUserView';
 
-const { Option } = Select
-const {Text, Title} = Typography
+const { Title } = Typography
 
 enum Stage {register, admin, signIn, appoint, manageUser}
 
