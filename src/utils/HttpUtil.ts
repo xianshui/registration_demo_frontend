@@ -1,18 +1,18 @@
 import axios from 'axios'
 import {API_POINT} from '../Constants'
-//import Qs from 'qs'
+import Qs from 'qs'
 
 class HttpUtil {
   async register(appointment_time: string, name: string, email: string, password: string, address: string, photo: string, phone_number: string) {
-		return axios.post(`${API_POINT}/register`, JSON.stringify({appointment_time, name, email, password, address, photo, phone_number}) , {transformRequest: []})
+		return axios.post(`${API_POINT}/register`, Qs.stringify({appointment_time, name, email, password, address, photo, phone_number}) , {transformRequest: []})
   }
 
   async makeAppointment(email: string, password: string, time: string) {
-		return axios.post(`${API_POINT}/appoint`, JSON.stringify({time, email, password}))
+		return axios.post(`${API_POINT}/appoint`, Qs.stringify({time, email, password}))
   }
 
   async signIn(email: string, password: string) {
-		return axios.post(`${API_POINT}/signin`, JSON.stringify({email, password}))
+		return axios.post(`${API_POINT}/signin`, Qs.stringify({email, password}))
   }
 
   async signOut() {
