@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import { Select, Button,  Typography } from 'antd';
+import { Button,  Typography } from 'antd';
 import RegistrationView from './components/RegistrationView'
 import AppointmentView from './components/AppointmentView'
 import SignInView from './components/SignInView'
