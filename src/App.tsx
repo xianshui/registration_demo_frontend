@@ -20,10 +20,10 @@ function App() {
   }, [])
 
   const loadToken = async () => {
-    const token = localStorage.getItem('doctor_appointment_demo_token')
+    const newToken = localStorage.getItem('doctor_appointment_demo_token')
 
-    if (token) {
-      setToken(token)
+    if (token !== newToken && newToken !== null) {
+      setToken(newToken)
       setStage(Stage.admin)
     }
   }
